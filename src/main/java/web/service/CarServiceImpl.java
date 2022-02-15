@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CarServiseImpl implements CarService {
+public class CarServiceImpl implements CarService {
 
     private List<Car> cars;
 
@@ -18,6 +18,7 @@ public class CarServiseImpl implements CarService {
         cars.add(new Car("VAZ", "2107", 2000));
         cars.add(new Car("Porsche", "7777", 2018));
     }
+
 
     public List<Car> getCars(int count) {
         return cars.stream().limit(count).collect(Collectors.toList());
